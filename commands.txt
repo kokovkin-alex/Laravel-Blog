@@ -1,0 +1,11 @@
+php artisan make:model Article -fm
+php artisan make:model Tag -fm
+php artisan make:model Comment -fm
+php artisan make:model State -fm
+
+php artisan make:migration create_article_tag_table
+
+php artisan make:factory ArticleFactory --model=Article
+php artisan make:factory CommentFactory --model=Comment
+php artisan make:factory TagFactory --model=Tag
+php artisan make:factory StateFactory --model=State
