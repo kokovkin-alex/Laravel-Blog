@@ -17,3 +17,8 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+Route::get('article-json', [App\Http\Controllers\Api\ArticleController::class, 'show']);
+
+Route::put('article-increment-views', [App\Http\Controllers\Api\ArticleController::class, 'incrementViews']);
+Route::put('article-increment-likes', [App\Http\Controllers\Api\ArticleController::class, 'incrementLikes']);

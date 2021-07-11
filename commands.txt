@@ -9,3 +9,23 @@ php artisan make:factory ArticleFactory --model=Article
 php artisan make:factory CommentFactory --model=Comment
 php artisan make:factory TagFactory --model=Tag
 php artisan make:factory StateFactory --model=State
+
+
+composer require barryvdh/laravel-debugbar --dev
+composer require barryvdh/laravel-ide-helper --dev
+composer require laravel/ui
+
+php artisan  ide-helper:generate
+php artisan ui vue
+npm uninstall bootstrap jquery
+npm install bootstrap
+npm i bootstrap-icons
+npm install --save @fortawesome/fontawesome-free
+npm install vuex --save
+
+npm run dev
+
+php artisan make:resource ArticleResource
+php artisan make:resource CommentResource
+php artisan make:resource TagResource
+php artisan make:resource StateResource
