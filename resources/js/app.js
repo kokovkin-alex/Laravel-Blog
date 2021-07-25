@@ -25,6 +25,7 @@ Vue.component('example-component', require('./components/ExampleComponent.vue').
 Vue.component('article-component', require('./components/ArticleComponent.vue').default);
 Vue.component('views-component', require('./components/ViewsComponent.vue').default);
 Vue.component('likes-component', require('./components/LikesComponent.vue').default);
+Vue.component('comments-component', require('./components/CommentsComponent.vue').default);
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to
@@ -40,7 +41,7 @@ const app = new Vue({
         let slug = url.substring(url.lastIndexOf('/') + 1)
 
         this.$store.commit('SET_SLUG', slug)
-        this.$store.dispatch('getArticleData', slug)
-        this.$store.dispatch('viewsIncrement', slug)
+        this.$store.dispatch('article/getArticleData', slug)
+        this.$store.dispatch('article/viewsIncrement', slug)
     }
 });

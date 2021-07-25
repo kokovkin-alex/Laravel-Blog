@@ -22,3 +22,9 @@ Route::get('article-json', [App\Http\Controllers\Api\ArticleController::class, '
 
 Route::put('article-increment-views', [App\Http\Controllers\Api\ArticleController::class, 'incrementViews']);
 Route::put('article-increment-likes', [App\Http\Controllers\Api\ArticleController::class, 'incrementLikes']);
+
+Route::post('article-add-comment', [App\Http\Controllers\Api\CommentController::class, 'store']);
+
+Route::fallback(function () {
+   abort(404);
+});
